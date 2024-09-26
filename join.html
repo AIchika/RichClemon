@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join RichClemon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="join-container">
+        <div class="navbar">
+            <a href="index.html">
+            <div class="logo">
+                <img src="images/logo/Logo.png" alt="Logo" class="logo-img">
+            </div>
+            </a>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="courses.html">Courses</a>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <div class="nav-button">
+                    <a href="join.html">Join Now</a>
+                </div>
+            </ul>
+        </div>
+        <div class="join-text">
+            <h1>Join RichClemon</h1>
+            <p>Break the Language Barrier and Open doors to new opportunities and experience.</p>
+        </div>
+    </div>
+        </body>
+        <section class="join-section">
+            <div class="form-container">
+                <h2>Join Our Language Program</h2>
+                <p class="join-p">Fill in the form below to enroll in our language courses.</p>
+        
+                <form id="joinForm" action="http://localhost:3000/join" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional):</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="language">Preferred Language:</label>
+                        <select id="language" name="language" required>
+                            <option value="">Select a language</option>
+                            <option value="english">English</option>
+                            <option value="french">French</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="japanese">Japanese</option>
+                            <option value="italian">Italian</option>
+                            <option value="russian">Russian</option>
+                            <option value="turkish">Turkish</option>
+                            <option value="korean">Korean</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="portuguese">Portuguese</option>
+                            <option value="dutch">Dutch</option>
+                            <option value="german">German</option>
+                            <option value="arabic">Arabic</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="course">Select Course:</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select a course</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="payment-id">Payment Confirmation Number:</label>
+                        <input type="text" id="payment-id" name="payment-id" required placeholder="Enter payment ID">
+                    </div>
+        
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the terms and conditions</label>
+                    </div>
+        
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    <footer>
+        <div class="footer-item">
+            <h1>RichClemon School of Languages</h1>
+            <p>&copy; 2024 RichClemon. All rights reserved.</p>
+        </div>
+<nav class="footer-nav">
+    <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="termsofuse.html">Terms of Use</a></li>
+    </ul>
+</nav>
+        <a href="index.html">
+        <div class="logo">
+            <img src="images/logo/Logo.png" alt="RichClemon Logo">
+        </div>
+        </a>
+
+        <!-- Social icons and email aligned on the same line -->
+        <div class="footer-row">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/profile.php?id=61565951653997&mibextid=LQQJ4d"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/richclemon?igsh=MTR4NHR5NXpqMGVmbw%3D%3D&utm_source=qr"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-x"></i></a></li>
+                <li><a href="https://www.tiktok.com/@richclemon.school?_t=8q0i2YZ4rWZ&_r=1"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+            <div class="footer-p">
+                <p>info@richclemon.com</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+                // Toggle between menu icon and X icon
+                if (navLinks.classList.contains('show')) {
+                    menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/66f3c7504cbc4814f7de547c/1i8k455b6';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

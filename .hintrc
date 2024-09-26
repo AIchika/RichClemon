@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off",
+    "axe/name-role-value": "off",
+    "axe/text-alternatives": "off",
+    "axe/aria": "off",
+    "compat-api/css": "off",
+    "compat-api/html": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not firefox <= 115",
+    "not ios_saf <= 15.8"
+  ]
+}
