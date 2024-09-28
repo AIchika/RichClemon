@@ -13,16 +13,17 @@ body {
 
 video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;    
+    z-index: 0;  
+    transform: translate(-50%, -50%);
 }
 @media (max-width: 768px) {
     .video-container {
-        height: 50vh;
+        height: 65vh;
         /* Or adjust as needed */
         padding-bottom: 30px;
     }
@@ -217,9 +218,6 @@ video {
         /* Slide the menu in from the right */
         /* Removed display: block; */
     }
-    h1, p{
-        font-size: 1.2rem;
-    }
     .nav-button{
         margin: 25px 0;
         align-items: center;
@@ -229,52 +227,97 @@ video {
 /* Welcome text styling */
 .welcome-text {
     position: relative;
+    /* Changed from relative to absolute for better positioning */
     top: 30%;
-    margin: 75px auto auto;
-    /* Center text vertically */
+    /* Position relative to its container */
     left: 50%;
     /* Center text horizontally */
-    transform: translate(-50%, -50%);
-    /* Adjust positioning */
+    transform: translate(-50%, -30%);
+    /* Adjust vertical positioning */
     text-align: center;
     color: white;
     z-index: 10;
     /* Ensure text is above the video */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Add shadow for better readability */
+    /* Shadow for readability */
 }
 
 .welcome-text h1 {
-    font-size: 60px;
-    text-align: center;
-    text-decoration: solid;
+    font-size: 3rem;
+    /* Default for larger screens */
+    margin-bottom: 10px;
+    /* Add space below the heading */
 }
 
 .welcome-text p {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    /* Default for larger screens */
+    margin: 0;
+    /* Remove default margin to keep spacing consistent */
 }
+
+/* Class styles */
 .rich {
     color: rgb(211, 116, 6);
 }
-.school{
+
+.school {
     color: #5193a2;
 }
+
+.welcome-button{
+    margin-top: 40px;
+}
+
 .welcome-button a {
     color: white;
     text-decoration: none;
-    background-color:#c9ccd1;
-    background-size: 350px;
-    padding: 8px 15px;
+    background-color: #c9ccd1;
+    padding: 10px 15px;
+    margin-top: 50px;
     border-radius: 10px;
     margin-left: 10px;
 }
 
 .welcome-button a:hover {
     background-color: #909291;
-    color: white;
     text-decoration: none;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .welcome-text {
+        top: 30%;
+        /* Adjust positioning for smaller screens */
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+        /* Reduce font size for heading */
+    }
+
+    .welcome-text p {
+        font-size: 1rem;
+        /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-text {
+        top: 30%;
+        /* Further adjust positioning for very small screens */
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+        /* Further reduce font size for heading */
+    }
+
+    .welcome-text p {
+        font-size: 0.9rem;
+        /* Further reduce font size for paragraph */
+    }
+}
 /* Slider Section */
 .slider-text h1{
     text-align: center;
@@ -1002,6 +1045,32 @@ footer {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .course-welcome h1 {
+        font-size: 2rem;
+        /* Reduce font size for heading */
+    }
+
+    .course-welcome p {
+        font-size: 1rem;
+        /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .course-welcome h1 {
+        font-size: 2rem;
+        /* Further reduce font size for heading */
+    }
+
+    .course-welcome p {
+        font-size: 0.9rem;
+        /* Further reduce font size for paragraph */
+    }
+}
+
 /* Main grid container */
 .course-grid-heading h1 {
     text-align: center;
@@ -1078,7 +1147,8 @@ footer {
     }
 
     .text h3 {
-        font-size: 18px;
+        font-size: 18px
+;
     }
 
     .text {
@@ -1520,6 +1590,31 @@ footer {
     margin-bottom: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-welcome-text h1 {
+        font-size: 2rem;
+        /* Reduce font size for heading */
+    }
+
+    .about-welcome-text p {
+        font-size: 1rem;
+        /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about-welcome-text h1 {
+        font-size: 2rem;
+        /* Further reduce font size for heading */
+    }
+
+    .about-welcome-text p {
+        font-size: 0.9rem;
+        /* Further reduce font size for paragraph */
+    }
+}
 
 /* Course Cards */
 .course-cards {
@@ -1675,7 +1770,7 @@ footer {
     background-color: #d4d4d4;
     /* Line color between items */
 }
-/*-------testimonial  starts------*/
+/*-------testimonial starts------*/
 .testimonial-container {
     padding: 40px 20px;
     background-color: #f5f5f5;
@@ -1691,6 +1786,7 @@ footer {
 .testimonial-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* Default to 3 columns for larger screens */
     gap: 20px;
     text-align: center;
 }
@@ -1719,7 +1815,38 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-/* ------testimonial  close-------*/
+
+/* ------responsive styles for smaller screens------ */
+@media (max-width: 768px) {
+    .testimonial-section {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-section {
+        grid-template-columns: 1fr;
+        /* 1 column on small screens */
+    }
+
+    .testimonial-title {
+        font-size: 2rem;
+        /* Slightly smaller title for smaller screens */
+    }
+
+    .testimonial-item p {
+        font-size: 1rem;
+        /* Adjust paragraph text size */
+    }
+
+    .testimonial-item h4 {
+        font-size: 1.1rem;
+        /* Adjust heading size */
+    }
+}
+
+/* ------testimonial close------- */
 
 /* gallery */
 .about-gallery {
@@ -1734,16 +1861,18 @@ footer {
     /* Adjust the height of the section */
     background-color: #d3d2da;
     /* Example background for the section */
+    overflow: hidden;
 }
 
 .gallery {
-    width: 280px;
+    width: 180px;
     /* Increase the width of the gallery */
     height: 170px;
     /* Increase the height of the gallery */
     display: grid;
     transform-style: preserve-3d;
     animation: rotate 35s linear infinite;
+    gap: 5px;
 }
 
 @keyframes rotate {
@@ -1774,7 +1903,14 @@ footer {
     object-fit: cover;
     border-radius: 30px;
 }
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    
+}
 
+@media (max-width: 480px) {
+    
+}
 /*---------------------------------contact----------------------------------------*/
 /* Contact Page Styles */
 .contact-container {
@@ -1840,6 +1976,31 @@ footer {
     text-align: center;
     padding-left: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-text h1 {
+        font-size: 2rem;
+        /* Reduce font size for heading */
+    }
+
+    .contact-text p {
+        font-size: 1rem;
+        /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contact-text h1 {
+        font-size: 2rem;
+        /* Further reduce font size for heading */
+    }
+
+    .contact-text p {
+        font-size: 0.9rem;
+        /* Further reduce font size for paragraph */
+    }
 }
 /* Contact Form Section */
 .contact-form-section {
@@ -1957,6 +2118,31 @@ footer {
     text-align: center;
     padding-left: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .join-text h1 {
+        font-size: 2rem;
+        /* Reduce font size for heading */
+    }
+
+        .join-text p {
+        font-size: 1rem;
+        /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .join-text h1 {
+        font-size: 2rem;
+        /* Further reduce font size for heading */
+    }
+
+    .join-text p {
+        font-size: 0.9rem;
+        /* Further reduce font size for paragraph */
+    }
 }
 
 .join-container {
