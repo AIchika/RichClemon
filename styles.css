@@ -108,14 +108,14 @@ video {
 .nav-button a {
     color: white;
     text-decoration: none;
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     padding: 8px 15px;
     border-radius: 15px;
     margin-left: 10px;
 }
 
 .nav-button a:hover {
-    background-color: #909291;
+    background-color: #ee8a10;
     color: white;
     text-decoration: none;
 }
@@ -179,12 +179,12 @@ video {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 10%;
+        top: 0%;
         right: -100%;
         /* Menu starts hidden off-screen */
         width: 70%;
         /* Adjust width as necessary */
-        height: 90%;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.8);
         flex-direction: column;
         align-items: center;
@@ -193,6 +193,7 @@ video {
         transition: right 0.3s ease;
         /* Smooth slide-in effect */
         z-index: 1000;
+        overflow: visible;
     }
 
     .nav-links li {
@@ -272,7 +273,7 @@ video {
 .welcome-button a {
     color: white;
     text-decoration: none;
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     padding: 10px 15px;
     margin-top: 50px;
     border-radius: 10px;
@@ -280,8 +281,9 @@ video {
 }
 
 .welcome-button a:hover {
-    background-color: #909291;
+    background-color: rgb(211, 116, 6);
     text-decoration: none;
+    color: white;
 }
 
 /* Responsive styles */
@@ -324,7 +326,7 @@ video {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 50px;
-    background-color: #d2cfcf;
+    background-color: #5193a2;
     color: black;
 
 }
@@ -441,7 +443,7 @@ video {
     padding-top: 20px;
     padding-bottom: 30px;
     font-size: 50px;
-    background-color: #d2cfcf;
+    background-color: #5193a2;
     color: black;
 }
 .services-section {
@@ -466,7 +468,7 @@ video {
 
 .service-item i {
     font-size: 50px;
-    color: #d2cfcf;
+    color: #5193a2;
     margin-bottom: 10px;
 }
 
@@ -496,7 +498,7 @@ video {
     margin: 0 10px;
     padding: 10px 20px;
     cursor: pointer;
-    background-color:#c9ccd1;
+    background-color:#5193a2;
     color: white;
     border: none;
     border-radius: 15px;
@@ -504,7 +506,8 @@ video {
 }
 
 .tab-button:hover {
-    background-color: #909291;
+    background-color: #ee8a10;
+    border: none;
 }
 
 .content-section {
@@ -569,7 +572,7 @@ video {
 }
 
 .review-card {
-    background-color: #f5f5f5;
+    background-color: #5193a2;
     border-radius: 10px;
     padding: 15px;
     height: 300px;
@@ -584,9 +587,9 @@ video {
 .review-card:hover {
     transform: scale(1.05);
     /* Slightly increase size */
-    background-color: #e0e0e0;
+    background-color: #5193a2;
     /* Darken background on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(40, 39, 39, 0.2);
     /* Enhance shadow on hover */
 }
 
@@ -789,7 +792,7 @@ video {
 
 .hero-container .btn {
     padding: 15px 30px;
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     color: #fff;
     text-decoration: none;
     border-radius: 10px;
@@ -799,7 +802,7 @@ video {
 }
 
 .hero-container .btn:hover {
-    background-color:#909291;
+    background-color:#ee8a10;
     transform: translateY(-3px);
     /* Subtle lift effect on hover */
 }
@@ -913,6 +916,7 @@ footer {
     margin: 0;
     padding-left: 30px;
     display: flex;
+    margin-left: 40px;
 }
 
 .social-icons li {
@@ -926,7 +930,7 @@ footer {
 }
 
 .social-icons li a:hover {
-    color:#909291;
+    color:#5193a2;
 }
 
 /* Footer Info */
@@ -934,6 +938,7 @@ footer {
     margin: 0;
     padding: 0;
     padding-right: 30px;
+    margin-right: 40px;
 }
 .footer-nav {
     display: flex;
@@ -1091,7 +1096,7 @@ footer {
 
 /* Individual grid items */
 .course-grid-item {
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -1102,7 +1107,7 @@ footer {
 }
 
 .course-grid-item:hover {
-    background-color: #909291;
+    background-color: #447a86;
 }
 
 .icon {
@@ -1279,7 +1284,7 @@ footer {
 .instructor-section {
     text-align: center;
     padding: 30px;
-    background-color: #dadce3;
+    background-color: #5193a2;
 }
 
 .instructor-section h2 {
@@ -1289,7 +1294,7 @@ footer {
 
 .instructor-section p {
     margin-bottom: 30px;
-    color: #666;
+    color: black;
 }
 
 /* Grid layout for instructors */
@@ -1327,7 +1332,7 @@ footer {
 
 .instructor-title {
     font-size: 14px;
-    color: #666;
+    color: black;
 }
 
 /* Responsive grid for smaller screens */
@@ -1460,7 +1465,7 @@ footer {
 }
 
 .course-btn {
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     color: white;
     padding: 12px 25px;
     border-radius: 10px;
@@ -1471,7 +1476,7 @@ footer {
 }
 
 .course-btn:hover {
-    background-color: #909291;
+    background-color: #ee8a10;
     color: white;
     text-decoration: none;
 }
@@ -1626,7 +1631,7 @@ footer {
 }
 
 .course-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(13, 156, 169, 0.1);
     /* Transparent box with slight opacity */
     border-radius: 15px;
     padding: 20px;
@@ -1701,7 +1706,7 @@ footer {
 
 .achievement-item i {
     font-size: 2.5em;
-    color: #909291;
+    color: #5193a2;
     margin-bottom: 15px;
 }
 
@@ -2002,20 +2007,97 @@ footer {
         /* Further reduce font size for paragraph */
     }
 }
-/* Contact Form Section */
-.contact-form-section {
-    background-color: #f9f9f9;
+/* Flexbox for Layout */
+/* Flexbox for Layout */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     padding: 50px;
-    text-align: center;
+    gap: 10px;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+.picture-section {
+    flex: 1;
+    position: relative;
+    background-color: #5193a2;
+    border-radius: 15px;
+}
+
+.picture-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Hover Text Initially Hidden */
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    /* Start from the bottom */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Start the text at the bottom */
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    /* Padding for better spacing */
+    opacity: 0;
+    transform: translateY(100%);
+    /* Initially hidden below */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border-radius: 10px;
+}
+
+.hover-text .full-text {
+    display: none;
+}
+
+.picture-container:hover .hover-text {
+    opacity: 1;
+    transform: translateY(0);
+    /* Slide up from the bottom */
+}
+
+.picture-container:hover .hover-text .initial-text {
+    display: block;
+}
+
+.picture-container:hover .hover-text .full-text {
+    display: block;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    flex: 1;
+    background-color: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form-section h2 {
+    text-align: left;
+}
+
+.contact-form {
+    width: 100%;
 }
 
 .contact-form .form-group {
@@ -2037,53 +2119,68 @@ footer {
 }
 
 .contact-form button {
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-.contact-form button:hover{
-    background-color: #909291;
+
+.contact-form button:hover {
+    background-color: #ee8a10;
 }
 
-/* Address and Map Section */
+/* Responsive for Small Screens */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-form-section,
+    .picture-section {
+        height: auto;
+    }
+
+    .picture-container {
+        max-height: 300px;
+    }
+
+    .contact-form-section {
+        margin-top: 20px;
+    }
+}
+/* Styling for the Address Section */
 .address-section {
-    padding: 50px;
     text-align: center;
+    padding: 20px;
 }
 
-.address-section h2 {
-    margin-bottom: 20px;
-}
-
-.address-section iframe {
-    width: 80%;
-    height: 300px;
-    border: none;
+/* Container to Control Map Responsiveness */
+.map-container {
+    width: 100%;
+    height: 450px;
+    /* Default height for larger screens */
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Information Section */
-.contact-info {
-    background-color: #f5f5f5;
-    padding: 50px;
-    text-align: center;
+/* Responsive Map for Smaller Screens */
+@media (max-width: 768px) {
+    .map-container {
+        height: 350px;
+        /* Adjust height for tablets */
+    }
 }
 
-.contact-info h2 {
-    margin-bottom: 20px;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
+@media (max-width: 480px) {
+    .map-container {
+        height: 250px;
+        /* Adjust height for phones */
+    }
 }
 /* -------------------------------Join Page----------------------------------------*/
 
@@ -2176,34 +2273,88 @@ footer {
     transition: background-color 0.3s ease;
 }
 
+/* Join Section */
 .join-section {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    align-items: stretch;
+    padding: 50px;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
 }
-.form-container {
-    background: #fff;
-    padding: 40px;
-    max-width: 500px;
-    width: 100%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+
+/* Image Container Styling */
+.image-container {
+    flex: 1;
+    /* Adjusts width to fill the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    background-color: #5193a2;
+    border-radius: 15px;
 }
 
+.join-image {
+    width: 100%;
+    /* Ensures the image takes full width of its container */
+    height: 100vh;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+    min-height: 50%;
+    min-width: 90%;
+    /* This will prevent distortion while keeping the image centered */
+    border-radius: 10px;
+    /* Rounded corners for the image */
+}
+
+/* Form Container Styling */
+.form-container {
+    background: #fff;
+    /* Form background color */
+    padding: 40px;
+    max-width: 500px;
+    /* Set a max width for the form */
+    width: 100%;
+    /* Allow form to use full width up to max-width */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* Allows absolute positioning of background if needed */
+}
+
+/* Add a background image to the form (optional) */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    /* White background with transparency */
+    border-radius: 12px;
+    /* Match the form's rounded corners */
+    z-index: -1;
+    /* Place the background behind the form */
+}
+
+/* Rest of the CSS remains the same */
 h2 {
     font-size: 28px;
     margin-bottom: 10px;
     color: #000dff;
-    text-align: center;
+    text-align: left;
 }
 
+/* Additional CSS styles for the form */
 .join-p {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     color: #555;
 }
@@ -2235,36 +2386,155 @@ h2 {
 }
 
 .form-group-checkbox {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    /* Space above checkbox */
 }
 
-.checkbox label {
-    margin-left: 10px;
-    display: inline-flex;
-    
+.form-group-checkbox input {
+    margin-right: 10px;
+    /* Space between checkbox and label */
 }
 
 .submit-btn {
-    background-color: #c9ccd1;
+    background-color: #5193a2;
     color: white;
     padding: 12px;
     border: none;
     border-radius: 6px;
     font-size: 18px;
-    width: 40%;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #909291;
+    background-color: #ee8a10;
 }
 
-/* Mobile responsiveness */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .join-section {
+        flex-direction: column;
+        /* Stacks elements vertically */
+    }
+
+    .image-container {
+        flex-direction: column;
+        /* Ensures image stays on top in smaller screens */
+        gap: 10px;
+        /* Adjusts gap for smaller screens */
+    }
+
+    .form-container {
+        max-width: 100%;
+        /* Full width on smaller screens */
+        padding: 20px;
+    }
+
+    .join-image {
+        max-height: 300px;
+        /* Limit height on smaller screens */
+        object-fit: cover;
+        /* Ensure images cover the area without distortion */
+    }
+}
+
 @media (max-width: 600px) {
     .form-container {
+        padding: 15px;
+        /* Less padding on very small screens */
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.payment-section {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 800px;
+    /* Maximum width for the container */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 20px;
+    /* Padding inside the container */
+}
+
+.payment-methods {
+    margin-bottom: 20px;
+}
+
+.payment-method {
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.payment-method:hover {
+    background-color: #5193a2;
+}
+
+.account-details {
+    display: none;
+    /* Initially hidden */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.payment-button {
+    background-color: #5193a2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.payment-button:hover {
+    background-color: #ee8a10;
+}
+
+/* Responsive for Small Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .payment-section {
         padding: 20px;
+        /* Reduce padding for smaller screens */
     }
 }
 /* ------Join Page close-------*/
@@ -2403,4 +2673,28 @@ align-items: center;
 .privacy-policy ul {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+/* Style for the button */
+#topBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 99;
+    /* Make sure it stays on top */
+    font-size: 18px;
+    background-color: #5193a2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-left: 0;
+}
+
+#topBtn:hover {
+    background-color: #ee8a10;
 }

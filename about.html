@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Learn more about Richclemon School of Languages, classe, values, and the expert team committed to helping you achieve your language learning goals.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About RichClemon</title>
     <link rel="stylesheet" href="styles.css">
@@ -64,7 +66,7 @@
         <div class="achievement-container">
             <div class="achievement-item">
                 <i class="fas fa-plane"></i>
-                <h3>Founded in 2024</h3>
+                <h3>Founded in 2020</h3>
             </div>
             <div class="achievement-item">
                 <i class="fas fa-users"></i>
@@ -168,7 +170,7 @@
     <footer>
         <div class="footer-item">
             <h1>RichClemon School of Languages</h1>
-            <p>&copy; 2024 RichClemon. All rights reserved.</p>
+            <p>&copy; 2020 - 2024 RichClemon. All rights reserved.</p>
         </div>
 <nav class="footer-nav">
     <ul>
@@ -213,7 +215,30 @@
             });
         });
     </script>
+    <button onclick="topFunction()" id="topBtn">Top</button>
+    <script>
+        // Get the button
+        var topBtn = document.getElementById("topBtn");
 
+        // Show the button when scrolling down 20px from the top
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block"; // Show button
+            } else {
+                topBtn.style.display = "none"; // Hide button
+            }
+        }
+
+        // Scroll back to the top when the button is clicked
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+    </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

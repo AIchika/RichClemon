@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Explore our diverse range of language courses at Richclemon School of Languages. Learn from expert instructors and master a new language today!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Courses</title>
     <link rel="stylesheet" href="styles.css">
@@ -244,7 +246,7 @@
 <footer>
         <div class="footer-item">
             <h1>RichClemon School of Languages</h1>
-            <p>&copy; 2024 RichClemon. All rights reserved.</p>
+            <p>&copy; 2020 - 2024 RichClemon. All rights reserved.</p>
         </div>
         <nav class="footer-nav">
             <ul>
@@ -288,6 +290,30 @@
                 }
             });
         });
+    </script>
+    <button onclick="topFunction()" id="topBtn">Top</button>
+    <script>
+        // Get the button
+        var topBtn = document.getElementById("topBtn");
+
+        // Show the button when scrolling down 20px from the top
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block"; // Show button
+            } else {
+                topBtn.style.display = "none"; // Hide button
+            }
+        }
+
+        // Scroll back to the top when the button is clicked
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
     </script>
 
     <!--Start of Tawk.to Script-->

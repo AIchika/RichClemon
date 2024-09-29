@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Get in touch with Richclemon School of Languages for any inquiries about our language courses or services. We're here to help you on your language learning journey.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
@@ -40,11 +42,24 @@
             <p>Your journey to mastering a new language starts here!</p>
         </div>
     </div>
-    <section>
+    <section class="contact-section">
+        <!-- Picture Section with Hover Effect -->
+        <div class="picture-section">
+            <div class="picture-container">
+                <img src="images/body/ca2.jpg" alt="Picture" class="hover-image">
+                <div class="hover-text">
+                    <p class="initial-text">“Unlock the Power of Language”</p>
+                    <p class="full-text">At Richclemon, we offer immersive and engaging language programs that help you speak with confidence. Whether you’re a
+                    beginner or looking to master a new language, our expert tutors and interactive courses make learning enjoyable and
+                    effective. Start your journey to fluency today!</p>
+                </div>
+            </div>
+        </div>
+    
         <!-- Contact Form Section -->
         <div class="contact-form-section">
             <h2>Send Us a Message</h2>
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm" action="/send-email" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -60,7 +75,6 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </section>
     <section class="faq-section"></section>
     <h2>Frequently Asked Questions</h2>
     <div class="faq-grid">
@@ -145,7 +159,7 @@
     <footer>
         <div class="footer-item">
             <h1>RichClemon School of Languages</h1>
-            <p>&copy; 2024 RichClemon. All rights reserved.</p>
+            <p>&copy; 2020 - 2024 RichClemon. All rights reserved.</p>
         </div>
 <nav class="footer-nav">
     <ul>
@@ -189,6 +203,30 @@
                 }
             });
         });
+    </script>
+    <button onclick="topFunction()" id="topBtn">Top</button>
+    <script>
+        // Get the button
+        var topBtn = document.getElementById("topBtn");
+
+        // Show the button when scrolling down 20px from the top
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block"; // Show button
+            } else {
+                topBtn.style.display = "none"; // Hide button
+            }
+        }
+
+        // Scroll back to the top when the button is clicked
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
     </script>
 
     <!--Start of Tawk.to Script-->

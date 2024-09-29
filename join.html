@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Join Richclemon School of Languages and start learning a new language today. Register now to access our wide range of language courses designed for beginners and intermediate levels.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join RichClemon</title>
     <link rel="stylesheet" href="styles.css">
@@ -41,11 +43,14 @@
         </div>
     </div>
         <section class="join-section">
+            <div class="image-container">
+                <img src="images/body/ca1.jpg" alt="Join Image" class="join-image">
+            </div>
+        
             <div class="form-container">
                 <h2>Join Our Language Program</h2>
                 <p class="join-p">Fill in the form below to enroll in our language courses.</p>
-        
-                <form id="joinForm" action="http://localhost:3000/join" method="POST">
+                <form id="joinForm" action="http://localhost:3000/join" method="POST" class="join-form">
                     <div class="form-group">
                         <label for="name">Full Name:</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -91,8 +96,13 @@
                     </div>
         
                     <div class="form-group">
-                        <label for="payment-id">Payment Confirmation Number:</label>
-                        <input type="text" id="payment-id" name="payment-id" required placeholder="Enter payment ID">
+                        <label for="duration">Duration of Study:</label>
+                        <select id="duration" name="duration" required>
+                            <option value="3">3 months</option>
+                            <option value="6">6 months</option>
+                            <option value="9">9 months</option>
+                            <option value="12">12 months</option>
+                        </select>
                     </div>
         
                     <div class="form-group-checkbox">
@@ -104,10 +114,40 @@
                 </form>
             </div>
         </section>
+    <section class="payment-section">
+        <h2>Payment Information</h2>
+        <p>After successful registration, you will receive an identification code which will be used for your payment.</p>
+        <h3>Available Payment Methods:</h3>
+        <div class="payment-methods">
+            <div class="payment-method" onclick="toggleAccountDetails('nigeriaAccount')">
+                <h4>Nigeria Bank Transfer</h4>
+                <div class="account-details" id="nigeriaAccount">
+                    <p>Bank Name: First Bank of Nigeria</p>
+                    <p>Account Number: 0123456789</p>
+                    <p>Account Name: RichClemon School of Languages</p>
+                    <p>Branch: Victoria Island, Lagos</p>
+                </div>
+            </div>
+            <!-- Add more payment methods as needed -->
+        </div>
+    
+        <h3>Upload Payment Receipt</h3>
+        <form id="receiptForm" action="/upload-receipt" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="studentId">Your Identification Code:</label>
+                <input type="text" id="studentId" name="studentId" required>
+            </div>
+            <div class="form-group">
+                <label for="receipt">Upload Receipt:</label>
+                <input type="file" id="receipt" name="receipt" required>
+            </div>
+            <button class="payment-button" type="submit">Submit Receipt</button>
+        </form>
+    </section>
     <footer>
         <div class="footer-item">
             <h1>RichClemon School of Languages</h1>
-            <p>&copy; 2024 RichClemon. All rights reserved.</p>
+            <p>&copy; 2020 - 2024 RichClemon. All rights reserved.</p>
         </div>
 <nav class="footer-nav">
     <ul>
@@ -151,6 +191,40 @@
                 }
             });
         });
+    </script>
+
+    <button onclick="topFunction()" id="topBtn">Top</button>
+    <script>
+        // Get the button
+        var topBtn = document.getElementById("topBtn");
+
+        // Show the button when scrolling down 20px from the top
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block"; // Show button
+            } else {
+                topBtn.style.display = "none"; // Hide button
+            }
+        }
+
+        // Scroll back to the top when the button is clicked
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+        // payment acc visibity
+        function toggleAccountDetails(accountId) {
+                const accountDetails = document.getElementById(accountId);
+                if (accountDetails.style.display === 'none' || accountDetails.style.display === '') {
+                    accountDetails.style.display = 'block';
+                } else {
+                    accountDetails.style.display = 'none';
+                }
+            }
     </script>
 
     <!--Start of Tawk.to Script-->

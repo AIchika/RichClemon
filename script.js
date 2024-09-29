@@ -78,3 +78,4 @@ document.getElementById('joinForm').addEventListener('submit', function(e) {
     // Reset the form after submission
     this.reset();
 });
+
