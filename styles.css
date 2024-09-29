@@ -244,14 +244,14 @@ video {
 }
 
 .welcome-text h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     /* Default for larger screens */
     margin-bottom: 10px;
     /* Add space below the heading */
 }
 
 .welcome-text p {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     /* Default for larger screens */
     margin: 0;
     /* Remove default margin to keep spacing consistent */
@@ -294,12 +294,12 @@ video {
     }
 
     .welcome-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Reduce font size for heading */
     }
 
     .welcome-text p {
-        font-size: 1rem;
+        font-size: 1.4rem;
         /* Reduce font size for paragraph */
     }
 }
@@ -311,12 +311,12 @@ video {
     }
 
     .welcome-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Further reduce font size for heading */
     }
 
     .welcome-text p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         /* Further reduce font size for paragraph */
     }
 }
@@ -1039,13 +1039,13 @@ footer {
 }
 
 .course-welcome h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .course-welcome p {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     margin-bottom: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -1053,12 +1053,12 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
     .course-welcome h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Reduce font size for heading */
     }
 
     .course-welcome p {
-        font-size: 1rem;
+        font-size: 1.4rem;
         /* Reduce font size for paragraph */
     }
 }
@@ -1066,12 +1066,12 @@ footer {
 @media (max-width: 480px) {
 
     .course-welcome h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Further reduce font size for heading */
     }
 
     .course-welcome p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         /* Further reduce font size for paragraph */
     }
 }
@@ -1585,25 +1585,25 @@ footer {
 }
 
 .about-welcome-text h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .about-welcome-text p {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     margin-bottom: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 /* Responsive styles */
 @media (max-width: 768px) {
     .about-welcome-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Reduce font size for heading */
     }
 
     .about-welcome-text p {
-        font-size: 1rem;
+        font-size: 1.4rem;
         /* Reduce font size for paragraph */
     }
 }
@@ -1611,12 +1611,12 @@ footer {
 @media (max-width: 480px) {
 
     .about-welcome-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Further reduce font size for heading */
     }
 
     .about-welcome-text p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         /* Further reduce font size for paragraph */
     }
 }
@@ -1684,6 +1684,7 @@ footer {
 .about-section h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .about-section p {
@@ -1916,6 +1917,112 @@ footer {
 @media (max-width: 480px) {
     
 }
+
+/* Flexbox for Layout */
+.mission-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 50px;
+    gap: 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Text Section */
+.mission-text-section {
+    flex: 2;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mission-text-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mission-text-section ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.mission-text-section li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Picture Section */
+.mission-picture-section {
+    flex: 1;
+    max-width: 400px;
+    /* Fix the width of the image section */
+    background-color: #5193a2;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures the image doesn't overflow */
+    border: 5px solid #eee;
+    /* Add border to the image container */
+}
+
+.mission-picture-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mission-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Contain the image within the section, show full content */
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.mission-picture-container:hover .mission-image {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+}
+
+/* Responsive for Small Screens */
+@media (max-width: 768px) {
+    .mission-section {
+        flex-direction: column-reverse;
+        /* Stack the image below the text */
+        padding: 20px;
+    }
+
+    .mission-text-section,
+    .mission-picture-section {
+        height: auto;
+    }
+
+    .mission-picture-section {
+        max-width: 100%;
+        /* Allow the image section to be full-width on small screens */
+        margin-bottom: 20px;
+    }
+
+    .mission-picture-container {
+        max-height: 300px;
+    }
+
+    .mission-text-section {
+        margin-top: 20px;
+        padding-right: 0;
+    }
+}
 /*---------------------------------contact----------------------------------------*/
 /* Contact Page Styles */
 .contact-container {
@@ -1968,7 +2075,7 @@ footer {
 }
 
 .contact-text h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     text-align: center;
     padding-left: 50px;
@@ -1976,7 +2083,7 @@ footer {
 }
 
 .contact-text p {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     margin-bottom: 50px;
     text-align: center;
     padding-left: 50px;
@@ -1985,12 +2092,12 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
     .contact-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Reduce font size for heading */
     }
 
     .contact-text p {
-        font-size: 1rem;
+        font-size: 1.40rem;
         /* Reduce font size for paragraph */
     }
 }
@@ -1998,12 +2105,12 @@ footer {
 @media (max-width: 480px) {
 
     .contact-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Further reduce font size for heading */
     }
 
     .contact-text p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         /* Further reduce font size for paragraph */
     }
 }
@@ -2014,78 +2121,52 @@ footer {
     justify-content: space-between;
     align-items: stretch;
     padding: 50px;
-    gap: 10px;
+    gap: 20px;
 }
 
+/* Picture Section */
 .picture-section {
     flex: 1;
-    position: relative;
+    /* Make both picture and form equal size */
     background-color: #5193a2;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures the image doesn't overflow */
 }
 
 .picture-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    width: 95%;
+    height: 60%;
 }
 
 .hover-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
+    object-fit: cover;
+    /* Make the image cover the entire section */
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
 }
 
-/* Hover Text Initially Hidden */
-.hover-text {
-    position: absolute;
-    bottom: 0;
-    /* Start from the bottom */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    /* Start the text at the bottom */
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
-    /* Padding for better spacing */
-    opacity: 0;
-    transform: translateY(100%);
-    /* Initially hidden below */
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    border-radius: 10px;
-}
-
-.hover-text .full-text {
-    display: none;
-}
-
-.picture-container:hover .hover-text {
-    opacity: 1;
-    transform: translateY(0);
-    /* Slide up from the bottom */
-}
-
-.picture-container:hover .hover-text .initial-text {
-    display: block;
-}
-
-.picture-container:hover .hover-text .full-text {
-    display: block;
+/* Image hover effect */
+.picture-container:hover .hover-image {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
 }
 
 /* Contact Form Section */
 .contact-form-section {
     flex: 1;
+    /* Make both picture and form equal size */
     background-color: #f9f9f9;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -2135,11 +2216,14 @@ footer {
 @media (max-width: 768px) {
     .contact-section {
         flex-direction: column;
+        /* Stack the image and form vertically */
+        padding: 20px;
     }
 
     .contact-form-section,
     .picture-section {
         height: auto;
+        /* Let them take the full width */
     }
 
     .picture-container {
@@ -2154,6 +2238,9 @@ footer {
 .address-section {
     text-align: center;
     padding: 20px;
+}
+.address-section h2{
+    text-align: center;
 }
 
 /* Container to Control Map Responsiveness */
@@ -2202,7 +2289,7 @@ footer {
 }
 
 .join-text h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     text-align: center;
     padding-left: 50px;
@@ -2210,7 +2297,7 @@ footer {
 }
 
 .join-text p {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     margin-bottom: 50px;
     text-align: center;
     padding-left: 50px;
@@ -2219,12 +2306,12 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
     .join-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Reduce font size for heading */
     }
 
         .join-text p {
-        font-size: 1rem;
+        font-size: 1.4rem;
         /* Reduce font size for paragraph */
     }
 }
@@ -2232,12 +2319,12 @@ footer {
 @media (max-width: 480px) {
 
     .join-text h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Further reduce font size for heading */
     }
 
     .join-text p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         /* Further reduce font size for paragraph */
     }
 }
