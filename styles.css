@@ -972,22 +972,36 @@ footer {
 /* Centering the Footer Content */
 @media (max-width: 768px) {
     footer {
+        display: flex;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer-row {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     .social-icons {
-        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .social-icons li {
+        margin: 0 10px;
     }
 
     .footer-p {
         margin-top: 10px;
+        margin-left: 65px;
     }
 }
 /* Responsive Design */
@@ -2239,34 +2253,51 @@ footer {
     text-align: center;
     padding: 20px;
 }
-.address-section h2{
+
+.address-section h2 {
     text-align: center;
 }
 
-/* Container to Control Map Responsiveness */
+/* Container for the map */
 .map-container {
     width: 100%;
     height: 450px;
     /* Default height for larger screens */
-    max-width: 1200px;
+    max-width: 100%;
+    /* Ensure the map doesn't exceed its container */
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Map for Smaller Screens */
+/* Responsive for Tablets */
 @media (max-width: 768px) {
     .map-container {
         height: 350px;
         /* Adjust height for tablets */
     }
+
+    .map-container iframe {
+        height: 100%;
+        /* Make sure the iframe fills the container height */
+    }
 }
 
+/* Responsive for Phones */
 @media (max-width: 480px) {
     .map-container {
         height: 250px;
         /* Adjust height for phones */
+    }
+
+    .map-container iframe {
+        width: 100%;
+        /* Ensure iframe takes the full width of the screen */
+        height: 100%;
+        /* Ensure iframe takes the full height of the container */
+        border-radius: 5px;
+        /* Smaller border radius for mobile */
     }
 }
 /* -------------------------------Join Page----------------------------------------*/
