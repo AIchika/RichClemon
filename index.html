@@ -10,8 +10,8 @@
     <meta name="keywords"
         content="language school, RichClemon, learn languages, language courses, Japanese Language, RichClemon School of Languages, Break Language Barriers, School of languages, New Language, Italian languages, Spanish languages, English languages, French Language, Russian Languages, Educational, international Languages, learn new languages before traveling, what language can you speak, how many languages can you speak, richclemon school, richclemon language school, beginner japanese language, speak many languages ">
     <title>RichClemon School of Languages</title>
-    <link rel="icon" href="images/logo/Favicon.png" type="image/x-icon">
-<link rel="shortcut icon" href="images/logo/Favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/logo/Favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/logo/Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -20,12 +20,7 @@
 </head>
 
 <body>
-    <div class="video-container">
-        <video src="images/background/5091905-hd_1920_1080_25fps.mp4" id="video1" autoplay muted></video>
-        <video src="images/background/8198515-hd_1920_1080_25fps.mp4" id="video2" style="display: none;" muted></video>
-        <video src="images/background/8499710-hd_1920_1080_30fps.mp4" id="video3" style="display: none;" muted></video>
-        <video src="images/background/6145402-uhd_3840_2160_24fps.mp4" id="video4" style="display: none;" muted></video>
-        <video src="images/background/8196806-hd_1920_1080_25fps.mp4" id="video5" style="display: none;" muted></video>
+    <div class="image-background-container">
         <div class="navbar">
             <a href="index.html">
                 <div class="logo">
@@ -54,8 +49,8 @@
                 <a href="join.html">Join Now</a>
                 <a href="about.html">Learn More ></a>
             </div>
-        </div>
-</div>
+        </div> 
+    </div>
 </div>
 <section>
     <!-- Sliding Image Section -->
@@ -326,6 +321,24 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         }
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            // Toggle between menu icon and X icon
+            if (navLinks.classList.contains('show')) {
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    });
+</script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

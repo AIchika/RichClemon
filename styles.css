@@ -4,40 +4,29 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.video-container {
+.image-background-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 50vh;
+    background-image: url('images/background/backgroung.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;  
-    transform: translate(-50%, -50%);
-}
-@media (max-width: 768px) {
-    .video-container {
-        height: 65vh;
-        /* Or adjust as needed */
-        padding-bottom: 30px;
-    }
-}
-
-/* Add a semi-transparent blue overlay */
-.video-container::after {
+.image-background-container::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0%;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(104, 106, 108, 0.8);
+    height: 0%;
+    background-color: rgba(238, 243, 248, 0.8);
     /* Dreamy blue color */
     z-index: 1;
     /* Overlay above the video */
@@ -46,6 +35,70 @@ video {
     transition: background-color 0.3s ease;
 }
 
+.welcome-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding-top: 50px;
+    padding: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-text p {
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .welcome-text h1 {
+        font-size: 3rem;
+        /* Reduce font size for heading */
+    }
+
+        .welcome-text p {
+        font-size: 1.4rem;
+        /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .welcome-text h1 {
+        font-size: 3rem;
+        /* Further reduce font size for heading */
+    }
+
+        .welcome-text p {
+        font-size: 1.1rem;
+        /* Further reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-background-container {
+        height: 77vh;
+        /* Or adjust as needed */
+    
+    }
+}
+@media (max-width: 480px) {
+    .image-background-container {
+        height: 62vh;
+        /* Or adjust as needed */
+
+    }
+}
+
+/* Add a semi-transparent blue overlay */
+
+
 .navbar {
     position: absolute;
     top: 3%;
@@ -53,7 +106,7 @@ video {
     width: 100%;
     height: 100px;
     margin-top: 40px;
-    border-radius: 40px;
+    border-radius: 80px;
     padding-left: 40px;
     padding-right: 40px;
     background-color: rgba(11, 12, 12, 0.5);
@@ -120,60 +173,6 @@ video {
     text-decoration: none;
 }
 
-.dropdown {
-    position: relative;
-}
-/* Hide dropdown content initially */
-.dropdown-content {
-    display: none;
-    /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    /* Adjust dropdown width */
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    padding: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 columns grid */
-    gap: 10px;
-    /* Spacing between items */
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: grid;
-    color: #fdf9f9;
-    background-color: white;
-    border-radius: 10px;
-    width: 300px;
-    /* Shows the grid layout dropdown when hovered */
-}
-
-/* Dropdown list item styling */
-.dropdown-content li {
-    list-style: none;
-}
-
-.dropdown-content a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    padding: 5px;
-}
-
-.dropdown-content a img {
-    width: 20px;
-    /* Size of flag */
-    height: auto;
-    margin-right: 10px;
-    border-radius: 3px;
-    /* Optional: Rounded flag corners */
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -225,39 +224,6 @@ video {
     }
 }
 
-
-/* Welcome text styling */
-.welcome-text {
-    position: relative;
-    /* Changed from relative to absolute for better positioning */
-    top: 30%;
-    /* Position relative to its container */
-    left: 50%;
-    /* Center text horizontally */
-    transform: translate(-50%, -30%);
-    /* Adjust vertical positioning */
-    text-align: center;
-    color: white;
-    z-index: 10;
-    /* Ensure text is above the video */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Shadow for readability */
-}
-
-.welcome-text h1 {
-    font-size: 4rem;
-    /* Default for larger screens */
-    margin-bottom: 10px;
-    /* Add space below the heading */
-}
-
-.welcome-text p {
-    font-size: 1.6rem;
-    /* Default for larger screens */
-    margin: 0;
-    /* Remove default margin to keep spacing consistent */
-}
-
 /* Class styles */
 .rich {
     color: rgb(211, 116, 6);
@@ -287,45 +253,12 @@ video {
     color: white;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .welcome-text {
-        top: 30%;
-        /* Adjust positioning for smaller screens */
-    }
 
-    .welcome-text h1 {
-        font-size: 3rem;
-        /* Reduce font size for heading */
-    }
-
-    .welcome-text p {
-        font-size: 1.4rem;
-        /* Reduce font size for paragraph */
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome-text {
-        top: 30%;
-        /* Further adjust positioning for very small screens */
-    }
-
-    .welcome-text h1 {
-        font-size: 3rem;
-        /* Further reduce font size for heading */
-    }
-
-    .welcome-text p {
-        font-size: 1.1rem;
-        /* Further reduce font size for paragraph */
-    }
-}
 /* Slider Section */
 .slider-text h1{
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 50px;
     background-color: #5193a2;
     color: black;
@@ -1016,7 +949,7 @@ footer {
 /*--------------------------------------------Course--------------------*/
 .course-container {
     position: relative;
-    min-height: 50vh;
+    min-height: 60vh;
     background-image: url('images/body/sky1.jpg');
     background-size: cover;
     background-position: center;
@@ -1562,7 +1495,7 @@ footer {
 /* Background Image and Overlay */
 .about-container {
     position: relative;
-    min-height: 70vh;
+    min-height: 50vh;
     background-image: url('images/body/sky3.jpg');
     background-size: cover;
     background-position: center;
@@ -2375,6 +2308,8 @@ footer {
     align-items: center;
     text-align: center;
     color: white;
+    width: 100%;
+    overflow: hidden;
 }
 .join-container::after {
     content: "";

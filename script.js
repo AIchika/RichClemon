@@ -18,21 +18,6 @@ videos.forEach((video) => {
 videos[currentVideoIndex].play();
 
 //----------------------------------hamburger menu--------------------------------------------------------------
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-
-        // Toggle between menu icon and X icon
-        if (navLinks.classList.contains('show')) {
-            menuToggle.innerHTML = '<i class="fas fa-times"></i>'; // Show X icon
-        } else {
-            menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; // Show menu icon
-        }
-    });
-});
 //--------------------------------button--------------------------------
 
 document.addEventListener("DOMContentLoaded", function() {
